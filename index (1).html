@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safdar Sultan | Sketch Artist & Video Editor</title>
+<meta name="description" content="Portfolio of Safdar Sultan, built like a video editing timeline. Pencil sketch artist, CapCut video editor and BSIT student from Kamalia, Pakistan.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><rect width=%27100%27 height=%27100%27 rx=%2718%27 fill=%27%234af2d0%27/><path d=%27M38 28l34 22-34 22z%27 fill=%27%230e0f12%27/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e0f12;--panel:#16181d;--line:#2a2d35;--ink:#eceef2;--muted:#8b91a0;--mint:#4af2d0;--red:#ff3b5c;--violet:#9b8cff;--amber:#ffb347;--pink:#ff6fa8;--blue:#5aa9ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Sora,system-ui,sans-serif;padding-bottom:96px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1020px;margin:0 auto;padding:0 22px}
+.top{position:sticky;top:0;z-index:20;background:#0e0f12e6;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:54px}
+.proj{font-size:13px;color:var(--muted);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.proj b{color:var(--ink)}
+#tc{font-size:20px;color:var(--mint);min-width:108px;text-align:right}
+#play{width:40px;height:40px;border-radius:50%;border:2px solid var(--mint);background:transparent;color:var(--mint);cursor:pointer;font-size:15px}
+#play:hover{background:var(--mint);color:var(--bg)}
+.scene{padding:80px 0;border-bottom:1px solid var(--line);scroll-margin-top:54px}
+.tag{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:18px}
+.tag i{width:12px;height:12px;border-radius:3px;background:var(--c,var(--mint))}
+h1{font-size:clamp(46px,9vw,98px);line-height:.98;font-weight:800;margin:0 0 18px;letter-spacing:-.03em}
+h2{font-size:clamp(32px,5.4vw,52px);line-height:1.05;font-weight:800;margin:0 0 26px;letter-spacing:-.02em}
+.role{font-size:clamp(18px,2.8vw,24px);color:var(--mint);margin:0 0 18px;min-height:1.6em}
+.lead{color:var(--muted);max-width:42ch;margin:0 0 28px}
+.g2{display:grid;grid-template-columns:1.2fr 1fr;gap:44px;align-items:center}
+@media(max-width:800px){.g2{grid-template-columns:1fr}.scene{padding:56px 0}}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--panel)}
+.btn.p{background:var(--mint);color:var(--bg);border-color:var(--mint)}
+.btn:hover{border-color:var(--mint)}
+.mon{position:relative;width:min(380px,100%);margin:0 auto;aspect-ratio:4/5;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.mon img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block}
+.mon .noimg{display:none;height:100%;place-items:center;text-align:center;color:var(--muted);font-size:14px;padding:30px}
+.mon::after{content:"";position:absolute;inset:14px;border:2px solid #ffffff55;border-radius:4px;pointer-events:none;mask:linear-gradient(#000 0 0) top left/22px 22px no-repeat,linear-gradient(#000 0 0) top right/22px 22px no-repeat,linear-gradient(#000 0 0) bottom left/22px 22px no-repeat,linear-gradient(#000 0 0) bottom right/22px 22px no-repeat;-webkit-mask:linear-gradient(#000 0 0) top left/22px 22px no-repeat,linear-gradient(#000 0 0) top right/22px 22px no-repeat,linear-gradient(#000 0 0) bottom left/22px 22px no-repeat,linear-gradient(#000 0 0) bottom right/22px 22px no-repeat}
+.rec{position:absolute;top:24px;left:26px;font-size:12px;color:#fff;background:#000a;padding:3px 10px;border-radius:99px;z-index:2}
+.rec::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);margin-right:7px;animation:bl 1.2s steps(2) infinite}
+@keyframes bl{50%{opacity:.1}}
+.lane{display:grid;gap:14px;margin-top:6px}
+.lane div{display:flex;justify-content:space-between;gap:16px;padding:12px 16px;background:var(--panel);border-left:5px solid var(--c);border-radius:4px}
+.lane dt{color:var(--muted);font-size:14px}.lane dd{margin:0;text-align:right}
+.cards{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--panel);border-radius:10px;border:1px solid var(--line);overflow:hidden}
+.card::before{content:"";display:block;height:8px;background:var(--c)}
+.card div{padding:20px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px;line-height:1.6}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:26px 0 0}
+.chips li{font-size:13px;padding:5px 12px;border-radius:5px;background:#ffffff10;border:1px solid var(--line)}
+.bin{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.item{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+.item img,.ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block}
+.ph{display:grid;place-items:center;text-align:center;border:2px dashed var(--line);color:var(--muted);font-size:13px;padding:8px}
+.item h3{margin:12px 0 2px;font-size:16px}
+.item p{margin:0 0 6px;color:var(--muted);font-size:14px}
+.item a{color:var(--mint);font-weight:600;font-size:14px}
+.exp{display:grid;gap:12px;max-width:600px}
+.exp a{display:flex;justify-content:space-between;gap:14px;padding:16px 20px;background:var(--panel);border:1px solid var(--line);border-radius:8px;text-decoration:none;word-break:break-all}
+.exp a:hover{border-color:var(--mint);transform:translateX(6px)}
+.exp span{color:var(--mint)}
+footer{padding:26px 0;color:var(--muted);font-size:13px;text-align:center}
+#tl{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#0b0c0fF2;border-top:1px solid var(--line);padding:6px 14px 10px}
+.ruler{height:14px;background:repeating-linear-gradient(90deg,#ffffff40 0 1px,transparent 1px 5%);opacity:.6;margin-bottom:4px}
+#trk{position:relative;height:42px;display:flex;gap:2px}
+#trk a{flex:0 0 auto;min-width:0;border-radius:5px;background:var(--c);color:#0b0c0f;font:700 11px/42px 'JetBrains Mono',monospace;padding:0 8px;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:.55;transition:opacity .2s}
+#trk a.on{opacity:1}
+#ph{position:absolute;top:-18px;bottom:-6px;width:2px;background:var(--red);left:0;pointer-events:none}
+#ph::before{content:"";position:absolute;top:0;left:-6px;border:7px solid transparent;border-top:9px solid var(--red);border-bottom:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rec::before{animation:none}.exp a:hover{transform:none}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <button id="play" type="button" aria-label="Play or pause auto scroll">▶</button>
+  <div class="proj mono"><b>safdar_portfolio</b>.proj · 1080p · 30fps</div>
+  <div id="tc" class="mono" aria-hidden="true">00:00:00</div>
+</div></header>
+
+<main>
+<section class="scene" id="intro" data-name="INTRO" style="--c:var(--mint)"><div class="wrap g2">
+  <div>
+    <div class="tag mono"><i></i>CLIP 01 · INTRO</div>
+    <h1>Safdar<br>Sultan</h1>
+    <p class="role mono" id="role">Sketch Artist</p>
+    <p class="lead">I draw with pencils and cut with CapCut. BSIT student from Kamalia, Pakistan, building skills one frame at a time.</p>
+    <div class="btns"><a class="btn p" href="#certs">See certificates</a><a class="btn" href="#contact">Contact me</a></div>
+  </div>
+  <div class="mon">
+    <span class="rec mono">REC</span>
+    <img src="profile.jpg" alt="Portrait of Safdar Sultan" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+    <div class="noimg">Add your photo as profile.jpg</div>
+  </div>
+</div></section>
+
+<section class="scene" id="about" data-name="ABOUT" style="--c:var(--violet)"><div class="wrap g2">
+  <div>
+    <div class="tag mono" style="--c:var(--violet)"><i></i>CLIP 02 · ABOUT</div>
+    <h2>The person behind the edit</h2>
+    <p>I’m studying Information Technology at the University of Kamalia. Outside class I make realistic black and white pencil portraits, paint, and edit short videos.</p>
+    <p>I’m looking for practical experience where I can learn fast, take responsibility and work well in a team.</p>
+  </div>
+  <dl class="lane" style="margin:0">
+    <div style="--c:var(--violet)"><dt class="mono">STUDYING</dt><dd>BSIT, University of Kamalia</dd></div>
+    <div style="--c:var(--blue)"><dt class="mono">SINCE</dt><dd>2025</dd></div>
+    <div style="--c:var(--amber)"><dt class="mono">LANGUAGES</dt><dd>Urdu, Punjabi, English</dd></div>
+    <div style="--c:var(--pink)"><dt class="mono">OFF-TIMELINE</dt><dd>Art, cricket, movies, poetry</dd></div>
+  </dl>
+</div></section>
+
+<section class="scene" id="skills" data-name="SKILLS" style="--c:var(--amber)"><div class="wrap">
+  <div class="tag mono" style="--c:var(--amber)"><i></i>CLIP 03 · SKILLS</div>
+  <h2>What I can do</h2>
+  <div class="cards">
+    <article class="card" style="--c:var(--amber)"><div><h3>Pencil sketching</h3><p>Realistic portraits from reference photos with shading, proportion and fine detail.</p></div></article>
+    <article class="card" style="--c:var(--mint)"><div><h3>Video editing</h3><p>Short videos in CapCut, plus a Video Editing &amp; AI course from NDA Digital Skills.</p></div></article>
+    <article class="card" style="--c:var(--pink)"><div><h3>AI social media marketing</h3><p>Finished the 1.5-month AI Social Media Marketing course at NDA Digital Skills.</p></div></article>
+    <article class="card" style="--c:var(--blue)"><div><h3>IT support</h3><p>Google IT Support Professional Certificate, plus C++ and MS Office.</p></div></article>
+  </div>
+  <ul class="chips mono" aria-label="Skill tags"><li>Sketching</li><li>Portrait shading</li><li>CapCut</li><li>AI tools</li><li>Social media</li><li>IT support</li><li>C++</li><li>Word</li><li>Excel</li><li>PowerPoint</li></ul>
+</div></section>
+
+<section class="scene" id="certs" data-name="CERTS" style="--c:var(--pink)"><div class="wrap">
+  <div class="tag mono" style="--c:var(--pink)"><i></i>CLIP 04 · MEDIA BIN</div>
+  <h2>Certificates</h2>
+  <div class="bin">
+    <article class="item">
+      <img src="nda-certificate.jpg" alt="NDA Digital Skills certificate for the 1.5-Month AI Social Media Marketing Course" loading="lazy">
+      <h3>AI Social Media Marketing</h3><p>NDA Digital Skills · 15 Oct 2026</p><a href="nda-certificate.jpg" target="_blank" rel="noopener">Open full size</a>
+    </article>
+    <article class="item">
+      <div class="ph">Add image: video-editing-ai.jpg</div>
+      <h3>Video Editing &amp; AI</h3><p>NDA Digital Skills · short course</p>
+    </article>
+    <article class="item">
+      <div class="ph">Google IT Support<br>Coursera</div>
+      <h3>Google IT Support Professional (v.3)</h3><p>Coursera · 25 Aug 2026</p><a href="https://www.credly.com/go/UCLFhUfn" target="_blank" rel="noopener">Verify on Credly</a>
+    </article>
+  </div>
+</div></section>
+
+<section class="scene" id="contact" data-name="EXPORT" style="--c:var(--blue);border-bottom:0"><div class="wrap">
+  <div class="tag mono" style="--c:var(--blue)"><i></i>CLIP 05 · EXPORT</div>
+  <h2>Let’s work together</h2>
+  <div class="exp">
+    <a href="mailto:safdar034151@gmail.com"><span class="mono">EMAIL</span>safdar034151@gmail.com</a>
+    <a href="https://wa.me/923467208781" target="_blank" rel="noopener"><span class="mono">WHATSAPP</span>+92 346 7208781</a>
+    <a href="https://www.linkedin.com/in/safdar-sultan7" target="_blank" rel="noopener"><span class="mono">LINKEDIN</span>safdar-sultan7</a>
+    <a href="https://github.com/safdarsultan" target="_blank" rel="noopener"><span class="mono">GITHUB</span>safdarsultan</a>
+  </div>
+</div></section>
+</main>
+<footer class="mono">© <span id="yr">2026</span> Safdar Sultan · End of timeline</footer>
+
+<div id="tl" aria-label="Page timeline"><div class="ruler"></div><div id="trk"><div id="ph"></div></div></div>
+
+<script>
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('.scene')),trk=document.getElementById('trk'),ph=document.getElementById('ph'),tc=document.getElementById('tc'),btn=document.getElementById('play'),clips=[];
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var cols=['var(--mint)','var(--violet)','var(--amber)','var(--pink)','var(--blue)'];
+  secs.forEach(function(s,i){var a=document.createElement('a');a.href='#'+s.id;a.textContent=s.dataset.name;a.style.setProperty('--c',cols[i]);trk.appendChild(a);clips.push(a)});
+  function layout(){var t=0,h=secs.map(function(s){return s.offsetHeight});h.forEach(function(x){t+=x});
+    var w=trk.clientWidth-2*(secs.length-1);clips.forEach(function(a,i){a.style.width=(h[i]/t*w)+'px'})}
+  function pad(n){return(n<10?'0':'')+n}
+  function update(){var max=document.documentElement.scrollHeight-innerHeight,p=max>0?Math.min(1,scrollY/max):0;
+    ph.style.left=(p*trk.clientWidth)+'px';
+    var f=Math.round(p*180*30);tc.textContent=pad(Math.floor(f/1800))+':'+pad(Math.floor(f/30)%60)+':'+pad(f%30);
+    var y=scrollY+innerHeight*.4,cur=0;secs.forEach(function(s,i){if(s.offsetTop<=y)cur=i});
+    clips.forEach(function(a,i){a.classList.toggle('on',i===cur)})}
+  layout();update();
+  addEventListener('resize',function(){layout();update()});addEventListener('load',function(){layout();update()});
+  addEventListener('scroll',update,{passive:true});
+  var run=false;
+  function stop(){run=false;btn.textContent='▶'}
+  function step(){if(!run)return;var before=scrollY;scrollBy(0,1.6);if(scrollY===before){stop();return}requestAnimationFrame(step)}
+  btn.addEventListener('click',function(){if(run){stop();return}
+    if(scrollY+innerHeight>=document.documentElement.scrollHeight-4)scrollTo({top:0,behavior:'auto'});
+    run=true;btn.textContent='❚❚';requestAnimationFrame(step)});
+  ['wheel','touchstart','keydown'].forEach(function(e){addEventListener(e,stop,{passive:true})});
+  var still=matchMedia('(prefers-reduced-motion: reduce)').matches,roles=['Sketch Artist','Video Editor','BSIT Student'],el=document.getElementById('role');
+  if(!still){var i=0,j=roles[0].length,del=false;
+    (function tick(){var w=roles[i];el.textContent=w.slice(0,j)+'▌';
+      if(!del&&j===w.length){del=true;return setTimeout(tick,1500)}
+      if(del&&j===0){del=false;i=(i+1)%roles.length}
+      j+=del?-1:1;setTimeout(tick,del?40:85)})();}
+})();
+</script>
+</body>
+</html>
